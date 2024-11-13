@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #faf8ef;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #776e65;
+}
+
+label {
+  font-size: 1rem;
+  color: #776e65;
+  margin-right: 10px;
+}
+
+#puzzle-container {
+  display: grid;
+  gap: 10px;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #bbada0;
+  border-radius: 6px;
+  width: max-content;
+}
+
+.tile {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #776e65;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.6s ease;
+}
+
+.tile.empty {
+  background-color: #cdc1b4;
+  cursor: default;
+}
+
+.tile:not(.empty) {
+  background-color: #eee4da;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+#moveCounter {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #776e65;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin: 10px 0;
+  text-align: center;
+  display: inline-block;
+}
+
+#moveCounterContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.buttons {
+  margin-top: 10px;
+}
+
+button {
+  background-color: #8f7a66;
+  color: #f9f6f2;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 5px;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #a67d3d;
+}
+
+@keyframes victory {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
